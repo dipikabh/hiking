@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="text-align: center">
+          <h1 id="homepage-title">Enter Your Location</h1>
+        </div>
+        <form action="/show-trails" method="GET">
+          <div class="form-group">
+            <input class="form-control" type="textbox" name="zipcode"
+                placeholder="Your Address or Zip Code" required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="number" name="radius"
+                placeholder="Search Up To (miles)" min="1" max="200" required>
+          </div>
+            <input class="btn btn-primary" type="submit" value="Get Trails">
+        </form>
+      </div>
+    </div>
+{% endblock %}

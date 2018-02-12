@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- <link href="/static/project.css" rel="stylesheet"> -->
+        {% block title %}
+        {% endblock %}
+    </head>
+    <body>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
